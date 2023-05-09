@@ -8,3 +8,5 @@ function Welcome(prop) {
 }
 
 export default Welcome;
+
+//it just prints welcome 

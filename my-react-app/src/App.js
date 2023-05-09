@@ -9,7 +9,7 @@ function App() {
     
     <div>
  
-<Welcome name = "Sildi"/>
+<Welcome/>
 </div>  
   );
 }
