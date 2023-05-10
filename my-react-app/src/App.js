@@ -12,6 +12,7 @@ function App() {
  
 <Welcome name = "Sildi" />
 
+
 </div>  
   );
 }
