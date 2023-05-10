@@ -4,7 +4,7 @@ import React from "react";
 function Welcome(prop) {
     return(
         <div>
-        <p>Welcome {prop.name}</p>
+        <p>Welcome <h1>{prop.name}</h1></p>
         <p>Your age is{prop.age}</p>
         
         </div>
@@ -14,4 +14,4 @@ function Welcome(prop) {
 
 export default Welcome;
 
-//it just prints welcome 
+//IT CONVERTS PROP.NAME TO H1
