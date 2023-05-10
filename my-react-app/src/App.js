@@ -1,5 +1,6 @@
 import './App.css';
 import Welcome from './welcome';
+import Age from './Age'
 
 
 
@@ -9,7 +10,8 @@ function App() {
     
     <div>
  
-<Welcome name = "Sildi" age="5"/>
+<Welcome name = "Sildi" />
+
 </div>  
   );
 }

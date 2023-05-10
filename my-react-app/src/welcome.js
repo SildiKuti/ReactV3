@@ -1,11 +1,14 @@
 import React from "react";
+import Age from "./Age";
 
 
 function Welcome(prop) {
     return(
         <div>
         <p>Welcome <h1>{prop.name}</h1></p>
-        <p>Your age is{prop.age}</p>
+        <Age age="5"></Age>
+   
+       
         
         </div>
     )
