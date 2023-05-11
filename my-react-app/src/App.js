@@ -10,7 +10,7 @@ function App() {
     
     <div>
  
-<Welcome name = "Sildi" />
+<Welcome name = "John" />
 
 
 </div>  
