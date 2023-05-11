@@ -2,7 +2,16 @@ import React from "react";
 import Welcome from "./welcome";
 
 function Age(prop) {
-  return <> (<p>Your age is:{prop.age}</p>)</>
-}
+
+    return (
+      <div>
+        {prop.age > 18 ? (
+          <p>Your age is {prop.age}</p>
+        ) : (
+          <p>You are very young!</p>
+        )}
+      </div>
+    )
+  }
 
 export default Age;
