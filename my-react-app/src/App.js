@@ -1,6 +1,7 @@
 import './App.css';
-import Welcome from './welcome';
-import Age from './Age'
+import Welcome from './components/welcome';
+import Age from './components/Age'
+import Counter from './components/counter'
 
 
 
@@ -11,6 +12,7 @@ function App() {
     <div>
  
 <Welcome name = "John" />
+<Counter/>
 
 
 </div>  
