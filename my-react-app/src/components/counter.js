@@ -4,13 +4,13 @@
 
 import React, { useState, useEffect } from 'react';
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
-
+const Counter = (prop) => {
+  const [count, setCount] = useState(prop.initial);
+  
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCount((prevCount) => prevCount + 1);
-    }, 1000);
+      setCount((prevCount) => prevCount + prop.increment);
+    }, prop.interval);
 
     return () => clearInterval(intervalId);
   }, []);
