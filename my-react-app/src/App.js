@@ -2,6 +2,7 @@ import './App.css';
 import Welcome from './components/welcome';
 import Age from './components/Age'
 import Counter from './components/counter'
+import ClickCounter from './components/ClickCounter';
 
 
 
@@ -13,6 +14,7 @@ function App() {
  
 <Welcome name = "John" />
 <Counter/>
+<ClickCounter/>
 
 
 </div>  
