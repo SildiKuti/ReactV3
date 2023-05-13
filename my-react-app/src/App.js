@@ -3,6 +3,7 @@ import Welcome from './components/welcome';
 import Age from './components/Age'
 import Counter from './components/counter'
 import ClickCounter from './components/ClickCounter';
+import ClickTracker from './components/ClickTracker';
 
 
 
@@ -15,6 +16,7 @@ function App() {
 <Welcome name = "John" />
 <Counter/>
 <ClickCounter/>
+<ClickTracker/>
 
 
 </div>  
