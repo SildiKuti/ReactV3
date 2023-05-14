@@ -13,22 +13,25 @@ export function ToDoList({ todos }) {
     setInputVal("");
   };
 
-  const Reset=()=>{
-    setItems([])
-  }
-  return (
-    <>
-      <ul>
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-      <input type="text" id="input" value={inputVal} onChange={handleInput} />
-      <button onClick={addToList}>Send</button>
-      <button onClick={Reset}>reset</button>
-    </>
-    
-  );
-}
+  const deleteItem=(i)=>{
+    setItems(items.filter((items, index) => index !== i))
+};
+  
 
+
+return(
+    <>
+    <ul>
+      {items.map((item, index) => (
+        <div>
+          <li key={index}>{item}</li>
+          <button onClick={deleteItem}>Delete</button>
+        </div>
+  ))}
+    </ul>
+    <input type="text" id="input" value={inputVal} onChange={handleInput} />
+    <button onClick={addToList}>Add</button>
+    </>
+  )
+  }
 export default ToDoList;
