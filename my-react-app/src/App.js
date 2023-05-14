@@ -1,29 +1,11 @@
-import './App.css';
-import Welcome from './components/welcome';
-import Age from './components/Age'
-import Counter from './components/counter'
-import ClickCounter from './components/ClickCounter';
-import { InteractiveComponent } from './components/InteractiveComponent';
-import { Uncontrolled } from './components/Uncontrolled';
-
-
-
+import "./App.css";
+import ToDoList from "./components/ToDoList";
 
 function App() {
-  
-  return (
-    
-    <div>
- 
-<Welcome name = "John" />
-<Counter/>
-<ClickCounter/>
-<InteractiveComponent/>
-<Uncontrolled/>
+  return <div>
 
-
-</div>  
-  );
+    <ToDoList/>
+  </div>;
 }
 
 export default App;
