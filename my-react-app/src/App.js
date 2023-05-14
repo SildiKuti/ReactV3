@@ -3,7 +3,7 @@ import Welcome from './components/welcome';
 import Age from './components/Age'
 import Counter from './components/counter'
 import ClickCounter from './components/ClickCounter';
-import { IntercativeComponent } from './components/InteractiveComponent';
+import { InteractiveComponent } from './components/InteractiveComponent';
 
 
 
@@ -17,7 +17,7 @@ function App() {
 <Welcome name = "John" />
 <Counter/>
 <ClickCounter/>
-<IntercativeComponent/>
+<InteractiveComponent/>
 
 
 </div>  
