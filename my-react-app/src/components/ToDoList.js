@@ -13,6 +13,9 @@ export function ToDoList({ todos }) {
     setInputVal("");
   };
 
+  const Reset=()=>{
+    setItems([])
+  }
   return (
     <>
       <ul>
@@ -22,6 +25,7 @@ export function ToDoList({ todos }) {
       </ul>
       <input type="text" id="input" value={inputVal} onChange={handleInput} />
       <button onClick={addToList}>Send</button>
+      <button onClick={Reset}>reset</button>
     </>
     
   );
