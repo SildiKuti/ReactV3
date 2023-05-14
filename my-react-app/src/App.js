@@ -4,6 +4,7 @@ import Age from './components/Age'
 import Counter from './components/counter'
 import ClickCounter from './components/ClickCounter';
 import { InteractiveComponent } from './components/InteractiveComponent';
+import { Uncontrolled } from './components/Uncontrolled';
 
 
 
@@ -18,6 +19,7 @@ function App() {
 <Counter/>
 <ClickCounter/>
 <InteractiveComponent/>
+<Uncontrolled/>
 
 
 </div>  
