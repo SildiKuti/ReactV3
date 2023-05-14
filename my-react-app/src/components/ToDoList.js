@@ -10,6 +10,7 @@ export function ToDoList({ todos }) {
 
   const addToList = () => {
     setItems([...items, inputVal]);
+    setInputVal("");
   };
 
   return (
@@ -22,6 +23,7 @@ export function ToDoList({ todos }) {
       <input type="text" id="input" value={inputVal} onChange={handleInput} />
       <button onClick={addToList}>Send</button>
     </>
+    
   );
 }
 
