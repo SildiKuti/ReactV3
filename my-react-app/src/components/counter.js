@@ -1,28 +1,18 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-function Counter(props) {
-  
-const [counter,setCount] = useState(0)
+export default function Counter() {
+  const [count, setCount] = useState(0);
 
-function click(prop) {
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount(count => count + 1);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
-  setCount(counter+1)
-  
+  return (
+    <div>
+      <p>Count = {count}</p>
+    </div>
+  )
 }
-  
-  useEffect(()=>{console.log(`the counter is now ${counter}`)},[counter])
-    
-  
-
-
-return(
-  <div>
-  <h1>{counter}</h1>
-  <button onClick={click}>click</button>
-  </div>
-)
-}
-
-
-
-export default Counter;
