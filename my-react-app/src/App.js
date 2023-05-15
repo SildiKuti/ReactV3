@@ -1,4 +1,5 @@
 import "./App.css";
+import InteractiveComponent from "./components/InteractiveComponent";
 import ToDoList from "./components/ToDoList";
 import Counter from "./components/counter";
 
@@ -7,6 +8,7 @@ function App() {
 
     {/* <ToDoList/> */}
     <Counter/>
+   <InteractiveComponent></InteractiveComponent>
   </div>;
 }
 

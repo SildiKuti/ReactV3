@@ -1,41 +1,44 @@
-import React from "react";
+import React, { useState } from 'react'
 
-export class InteractiveComponent extends React.Component{
-    state = { 
-        username: '',
-        password: '',
-        remember: '',
-    }
+export default function InteractiveComponent() {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [remember, setRemember] = useState('');
 
-    handleInput = (event) => {
-        const value = event.target.value;
-        const name = event.target.name;
-        const type = event.target.type;
-        const checked = event.target.checked;
+    const handleUsernameChange = (event) => {
+        setUsername(event.target.value);
+    };
+    const handlePasswordChange = (event) => {
+        setPassword(event.target.value);
+    };
+    const handleRememberChange = (event) => {
+        setRemember(event.target.checked);
+    };
+    const handleSubmit = (event) => {
+        event.preventDefault();
+       
 
-        this.setState({ [name]: type === "checkbox" ? checked : value })
-    }
-
-    handleState = () => {
-        this.setState({
-            username: '',
-            password: '',
-            remember: '',
-        })
-    }
-
-    render() {
-        return <>
+    };
+    return (
         <div>
-         <button onClick={this.handleState}><h2>Reset</h2></button>
+            <form onSubmit={handleSubmit}>
+                <label>
+                   
+                    <input type="text" value={username} placeholder=' Username' onChange={handleUsernameChange} />
+                </label>
+                <br />
+                <label>
+                    
+                    <input type="password" value={password} placeholder='Password' onChange={handlePasswordChange} />
+                </label>
+                <br />
+                <label>
+                    Remember:
+                    <input type="checkbox" checked={remember} onChange={handleRememberChange} />
+                </label>
+                <br />
+                <button type="submit">Submit</button>
+            </form>
         </div>
-        <div>
-         <input name='username' value={this.state.username} onChange={this.handleInput}></input>
-         <input name='password' type='password' value={this.state.password} onChange={this.handleInput}></input>
-         <input name='remember' type='checkbox' checked={this.state.remember} onChange={this.handleInput}></input>
-         </div>
-        </>
-    }
+    );
 }
-
-export default InteractiveComponent;
