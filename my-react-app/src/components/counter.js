@@ -1,22 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import CounterDisplay from './CounterDisplay';
+import { useEffect, useState } from "react";
 
-const Counter = (prop) => {
+function Counter(props) {
+  
+const [counter,setCount] = useState(0)
+
+function click(prop) {
+
+  setCount(counter+1)
+  
+}
+  
+  useEffect(()=>{console.log(`the counter is now ${counter}`)},[counter])
     
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCount((prevCount) => prevCount + 1);
-    }, 1000);
+  
 
 
-  return () => clearInterval(intervalId);
-}, []);
+return(
+  <div>
+  <h1>{counter}</h1>
+  <button onClick={click}>click</button>
+  </div>
+)
+}
 
-return <CounterDisplay count={count} />;
 
-};
 
 export default Counter;
-

@@ -6,9 +6,9 @@ import Counter from "./components/counter";
 function App() {
   return <div>
 
-    {/* <ToDoList/> */}
+    {/* <ToDoList/> <InteractiveComponent></InteractiveComponent>*/}
     <Counter/>
-   <InteractiveComponent></InteractiveComponent>
+   
   </div>;
 }
 
