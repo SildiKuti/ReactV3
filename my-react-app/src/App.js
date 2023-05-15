@@ -5,13 +5,12 @@ import LanguageContext1 from "./components/LanguageContext";
 import ToDoList from "./components/ToDoList";
 import Counter from "./components/counter";
 import LanguageProvider from "./components/LanguageContext";
+import GitHub from "./components/github";
 
 
 function App() {
   return <div>
-    <LanguageProvider>
-      <DisplayLanguage />
-    </LanguageProvider>
+    <GitHub/>
 
    
   </div>;
