@@ -6,11 +6,13 @@ import ToDoList from "./components/ToDoList";
 import Counter from "./components/counter";
 import LanguageProvider from "./components/LanguageContext";
 import GitHub from "./components/github";
+import CustomCounter from "./components/customCounter";
 
 
 function App() {
   return <div>
     <GitHub/>
+    <CustomCounter/>
 
    
   </div>;
