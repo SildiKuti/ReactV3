@@ -1,30 +1,27 @@
-import { useState } from "react"
+import { useState } from "react";
 
 export default function CustomCounter(props) {
-    const [counter, setCounter] = useState(0)
+  const [username, setUsername] = useState(null);
+  const [password, setPassword] = useState(null);
 
+  const EventHandler = (e) => {
+    setUsername(e.username);
+  };
 
-    function clickI(params) {
+  const EventHandler1 = (e) => {
+    setPassword(e.password);
+  };
 
-        setCounter(counter => counter+1)
-        
-    }
-
-    function clickD(params) {
-
-        setCounter(counter=> counter-1)
-    }
-    
-    function reset(params) {
-        setCounter(counter => counter = 0)
-        
-    }
-
-    return(<div>
-
-<button onClick={clickI}>increment</button>
-<button onClick={clickD}>decrement</button>
-<button onClick={reset}>reset</button>
-        <h1>{counter}</h1>
-    </div>)
-}  
+  return (
+    <div>
+      <>
+        <input type="text" value={username} onChange={EventHandler}>
+          
+        </input>
+        <input type="password" value={password} onChange={EventHandler1}>
+          
+        </input>
+      </>
+    </div>
+  );
+}

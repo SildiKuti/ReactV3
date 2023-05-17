@@ -11,7 +11,7 @@ import CustomCounter from "./components/customCounter";
 
 function App() {
   return <div>
-    <GitHub/>
+    
     <CustomCounter/>
 
    
